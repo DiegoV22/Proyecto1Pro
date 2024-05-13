@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Proyecto1Pro.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create">Ingrese un nuevo Usuario</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdUsuario">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<style>
+    body {
+        background-color:thistle;
+    }
+
+    <!DOCTYPE html >
+    <html lang="es" >
+    <head >
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title > Imágenes y Texto</title >
+    <style >
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .image-container div {
+            max-width: 45%; 
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block; 
+            margin: 0 auto; 
+        }
+
+        .image-container .contact-info {
+            padding: 10px 0;
+        }
+</style>
+</head>
+<body>
+
+    <div class="image-container">
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.N5sUlpZa0_Z2bdu16Uy8rQHaHa?rs=1&amp;pid=ImgDetMain" alt="Simbolo De Email" />
+            <p class="contact-info">diego.vega.aguilera@udla.edu.ec</p>
+        </div>
+
+        <div>
+            <img src="https://pngimg.com/uploads/phone/phone_PNG48972.png" alt="Símbolo de Teléfono" />
+            <p class="contact-info">0969088003</p>
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Proyecto1Pro.Models.Compra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Compra</h1>
+
+
+<p>
+    <a asp-action="Create">Ingrese la Compra</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetodoPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peluche)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetodoPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peluche.IdPeluche)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCompra">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCompra">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCompra">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<style>
+    body {
+        background-color: lightgrey
+    }
+
+    <!DOCTYPE html >
+    <html lang="es" >
+    <head >
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title > Imágenes en una fila</title >
+    <style >
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .image-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+    }
+
+        .image-row img {
+            max-width: 150px; 
+            height: auto;
+            margin-right: 10px; 
+        }
+</style>
+</head>
+<body>
+
+    <div class="image-row">
+        <img src="https://c2.klipartz.com/pngpicture/913/774/sticker-png-shops-icon-logo-icon-visa-logo-icon-visa-icon-symbol-sign-yellow-meter-line.png" alt="Tiendas icon logo icon VISA logo icon" />
+
+        <img src="https://th.bing.com/th/id/R.16dbc44d8d44fd6157f722a9674e7b07?rik=cwIfi%2fkXzOul1g&amp;riu=http%3a%2f%2fpngimg.com%2fuploads%2fmastercard%2fmastercard_PNG23.png&amp;ehk=Q6HDF%2fsFcO33WL6NnZl7iIsvV%2fwBz53X15Si%2bbYrrQs%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="Logo De Mastercard" />
+
+        <img src="https://www.svgrepo.com/show/443625/credit-card-discover.svg" alt="Credit Card Discover Vector SVG Icon" />
+
+        <img src="https://th.bing.com/th/id/OIP.oKAqXM5rm8dje8D9Ie0I3AHaE8?rs=1&amp;pid=ImgDetMain" alt="Tipos de tarjeta de crédito American Express RTC" />
+    </div>
+
+</body>
+</html>
+

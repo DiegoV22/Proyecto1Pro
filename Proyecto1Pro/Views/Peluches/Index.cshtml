@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Proyecto1Pro.Models.Peluche>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Peluche</h1>
+
+<p>
+    <a asp-action="Create">Ingresar Peluche</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tamano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tamano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPeluche">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdPeluche">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPeluche">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+ </style>
+
+    <div class="image-container">
+        <!-- Imagen centrada horizontalmente -->
+        <img src="https://m.media-amazon.com/images/I/81KeRgwkbHL.jpg" alt="Buy Xsmart GLOBAL FNAF Plushies-Full Characters(10in)-Freddy Fazbear ..." />
+    </div>
+
+<style>
+
+    body {
+        background-color:lightpink
+    }
+

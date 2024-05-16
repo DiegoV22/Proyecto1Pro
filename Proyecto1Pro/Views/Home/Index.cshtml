@@ -1,17 +1,86 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<style>
-    body {
-        background-color: beige; /* Cambia este valor al color que desees */
-    }
-</style>
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al Mundo del Peluche</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
 
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        }
 
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333; 
+        }
 
-<div class="text-center">
-    <h1 style="font-size: 100px; font-weight: bold; font-family: 'Arial', sans-serif;">Bienvenido al Mundo del Peluche!</h1>
-    <p>Explora nuestro Instagram <a href="https://www.instagram.com/elmundodelpeluche.ec/">El Mundo del Peluche</a>.</p>
-<img src="https://elmundodelpeluche.com/wp-content/uploads/2023/05/logo.jpg" alt="" style="width: 700px; height: auto;" />
-</div>
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #555; 
+        }
 
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+            a:hover {
+                color: #e6503d; 
+            }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto; 
+            border-radius: 10px; 
+        }
+
+        .decorative-border {
+            border-top: 8px solid #ff6f61;
+            border-bottom: 8px solid #ff6f61;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+            .decorative-border p {
+                font-size: 16px;
+                color: #777;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al Mundo del Peluche</h1>
+        <p>Explora nuestro <a href="https://www.instagram.com/elmundodelpeluche.ec/">Instagram</a> El Mundo del Peluche.</p>
+        <img src="https://elmundodelpeluche.com/wp-content/uploads/2023/05/logo.jpg" alt="Logo Mundo del Peluche">
+
+        <div class="decorative-border">
+            <p>Descubre la magia de los peluches en nuestra tienda virtual. ¡Encuentra tu compañero ideal!</p>
+        </div>
+    </div>
+</body>
+</html>
